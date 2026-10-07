@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameNightly</title>
+  <meta name="description" content="GameNightly finds a night your group is free and puts game night on everyone's calendar." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/logo.svg" alt="" /><span>GameNightly</span></a>
+      <nav><a href="./" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <img src="assets/logo.svg" alt="GameNightly logo" />
+      <h1>GameNightly</h1>
+      <p>Find a night when your whole group is free, then put game night on everyone's calendar.</p>
+    </div>
+
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><b>1. Start a game night</b>Run <code>/gamenight</code> in Discord, or create a session on the web, and invite your friends.</li>
+        <li><b>2. Find the overlap</b>Players link Google Calendar (or mark their availability by hand), and GameNightly ranks the times when the most people are free.</li>
+        <li><b>3. Lock it in</b>The organizer picks a time, and GameNightly adds the event to their Google Calendar and invites the players.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Why we ask for Google Calendar access</h2>
+      <p>Linking Google Calendar is optional. If you link it, GameNightly asks for the permissions below and uses each one only for what's listed.</p>
+      <table class="scopes">
+        <thead><tr><th>Permission</th><th>What we use it for</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>See your free/busy times<br /><code>calendar.events.freebusy</code></td>
+            <td>To check when you're busy and suggest times when everyone is free. We only see busy and free blocks, never what your events are. We don't store them.</td>
+          </tr>
+          <tr>
+            <td>View and edit events on your calendars<br /><code>calendar.events</code></td>
+            <td>When you organize a game night and confirm a time, we create that one event on your primary calendar and invite the players. We also read your calendar's time zone so times show up correctly. We don't read, change or delete your other events.</td>
+          </tr>
+          <tr>
+            <td>See your email address<br /><code>userinfo.email</code></td>
+            <td>To know which Google account you linked, and so organizers can add you as a guest on the game night invite.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>You can remove GameNightly's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. See our <a href="privacy.html">Privacy Policy</a> for what we store and for how long.</p>
+    </section>
+
+    <section>
+      <h2>Questions?</h2>
+      <p>Email us at <span class="todo">[CONTACT EMAIL — TODO]</span>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 GameNightly</span>
+      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></span>
+    </div>
+  </footer>
+</body>
+</html>
