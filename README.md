@@ -13,13 +13,14 @@ Live: https://aaglidden.github.io/gamenightly-site/
 
 ## Files
 
-- `index.html`, `privacy.html`, `terms.html`: plain HTML with no build step. Each page repeats the same header and footer, so a nav change has to be made in all three.
-- `styles.css`: brand tokens copied from `Gamenightly/web/src/styles.css`.
+- `index.html`, `privacy.html`, `terms.html`: plain HTML with no build step. The privacy and terms pages share one header and footer, so a nav change has to be made in both.
+- `styles.css`: brand tokens copied from `Gamenightly/web/src/styles.css`, plus the legal-page styles.
+- `home.css`: homepage only (hero, scroll-driven core features, product cards). The homepage has its own header and footer.
 - `assets/logo.svg`: the master logo. `logo-120.png` (Google consent screen) and `logo-512.png` (Discord app icon / social) are exported from it.
 
 ## Keep in sync with the code
 
-The Google section of the homepage and the privacy policy describe exactly what the bot does. When any of these change, update both pages:
+The privacy policy and the Google Calendar card on the homepage describe exactly what the bot does. When any of these change, update both:
 - `SCOPES` in `src/oauth_server/src/oauth_server/google.py`
 - what's stored in Redis (`storage.py`, `services/store.py`)
 - retention: `SESSION_TTL_SECONDS` in `services/sessions.py` (14 days), and the web app's 30-day session expiry
